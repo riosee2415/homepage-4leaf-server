@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 /* SC04 */
 app.post(routes.sendEmail, SC0401Router);
+app.post(routes.sendEmailEstimate, SC0401Router);
 
 app.listen(PORT, () => {
   console.log(`✅ REST API NODE SERVER START :: PORT NUMBER ${PORT}`);
