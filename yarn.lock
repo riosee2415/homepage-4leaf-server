@@ -1858,6 +1858,19 @@ http-proxy@^1.18.0:
     follow-redirects "^1.0.0"
     requires-port "^1.0.0"
 
+httpntlm@1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/httpntlm/-/httpntlm-1.6.1.tgz#ad01527143a2e8773cfae6a96f58656bb52a34b2"
+  integrity sha512-Tcz3Ct9efvNqw3QdTl3h6IgRRlIQxwKkJELN/aAIGnzi2xvb3pDHdnMs8BrxWLV6OoT4DlVyhzSVhFt/tk0lIw==
+  dependencies:
+    httpreq ">=0.4.22"
+    underscore "~1.7.0"
+
+httpreq@>=0.4.22:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/httpreq/-/httpreq-0.5.2.tgz#be6777292fa1038d7771d7c01d9a5e1219de951c"
+  integrity sha512-2Jm+x9WkExDOeFRrdBCBSpLPT5SokTcRHkunV3pjKmX/cx6av8zQ0WtHUMDrYb6O4hBFzNU6sxJEypvRUVYKnw==
+
 iconv-lite@0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
@@ -2147,11 +2160,9 @@ json-buffer@3.0.0:
   integrity sha1-Wx85evx11ne96Lz8Dkfh+aPZqJg=
 
 json5@^2.1.2:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-2.1.3.tgz#c9b0f7fa9233bfe5807fe66fcf3a5617ed597d43"
-  integrity sha512-KXPvOm8K9IJKFM0bmdn8QXh7udDh1g/giieX0NLCaMnb4hEiVFqnop2ImTXCc5e0/oHz3LTqmHGtExn5hfMkOA==
-  dependencies:
-    minimist "^1.2.5"
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
+  integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
 keyv@^3.0.0:
   version "3.1.0"
@@ -2339,7 +2350,7 @@ minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@^1.2.0, minimist@^1.2.5:
+minimist@^1.2.0:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
@@ -2422,6 +2433,32 @@ node-releases@^1.1.53:
   version "1.1.53"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.53.tgz#2d821bfa499ed7c5dffc5e2f28c88e78a08ee3f4"
   integrity sha512-wp8zyQVwef2hpZ/dJH7SfSrIPD6YoJz6BDQDpGEkcA0s3LpAQoxBIYmfIq6QAhC1DhwsyCgTaTTcONwX8qzCuQ==
+
+nodemailer-fetch@1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/nodemailer-fetch/-/nodemailer-fetch-1.6.0.tgz#79c4908a1c0f5f375b73fe888da9828f6dc963a4"
+  integrity sha512-P7S5CEVGAmDrrpn351aXOLYs1R/7fD5NamfMCHyi6WIkbjS2eeZUB/TkuvpOQr0bvRZicVqo59+8wbhR3yrJbQ==
+
+nodemailer-shared@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/nodemailer-shared/-/nodemailer-shared-1.1.0.tgz#cf5994e2fd268d00f5cf0fa767a08169edb07ec0"
+  integrity sha512-68xW5LSyPWv8R0GLm6veAvm7E+XFXkVgvE3FW0FGxNMMZqMkPFeGDVALfR1DPdSfcoO36PnW7q5AAOgFImEZGg==
+  dependencies:
+    nodemailer-fetch "1.6.0"
+
+nodemailer-smtp-pool@^2.8.3:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/nodemailer-smtp-pool/-/nodemailer-smtp-pool-2.8.3.tgz#1d7a1c929e9cd830f275c970acfa3ff6ee976d94"
+  integrity sha512-sWRo9Pqq6zONdlIxWG8TVJNm+B9N3Z1oFyYKC0Mj1Xm2gaLuOk2aQU05fLv7RseoHqV9fq3FgNnZTgOPc3fXlA==
+  dependencies:
+    nodemailer-shared "1.1.0"
+    nodemailer-wellknown "0.1.10"
+    smtp-connection "2.12.0"
+
+nodemailer-wellknown@0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/nodemailer-wellknown/-/nodemailer-wellknown-0.1.10.tgz#586db8101db30cb4438eb546737a41aad0cf13d5"
+  integrity sha512-/VV4mjAEjfm2fn0loUvrpjvugw5rgurNjPO4WU24CuVSoeumsyLOTgaEWG8WoGdPxh1biOAp5JxDoy1hlA2zsw==
 
 nodemailer@^6.4.6:
   version "6.4.6"
@@ -2977,6 +3014,14 @@ slash@^2.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
   integrity sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==
 
+smtp-connection@2.12.0:
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/smtp-connection/-/smtp-connection-2.12.0.tgz#d76ef9127cb23c2259edb1e8349c2e8d5e2d74c1"
+  integrity sha512-UP5jK4s5SGcUcqPN4U9ingqKt9mXYSKa52YhqxPuMecAnUOsVJpOmtgGaOm1urUBJZlzDt1M9WhZZkgbhxQlvg==
+  dependencies:
+    httpntlm "1.6.1"
+    nodemailer-shared "1.1.0"
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
@@ -3238,6 +3283,11 @@ undefsafe@^2.0.2:
   integrity sha512-nrXZwwXrD/T/JXeygJqdCO6NZZ1L66HrxM/Z7mIq2oPanoN0F1nLx3lwJMu6AwJY69hdixaFQOuoYsMjE5/C2A==
   dependencies:
     debug "^2.2.0"
+
+underscore@~1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.7.0.tgz#6bbaf0877500d36be34ecaa584e0db9fef035209"
+  integrity sha512-cp0oQQyZhUM1kpJDLdGO1jPZHgS/MpzoWYfe9+CM2h/QGDZlqwT2T3YGukuBdaNJ/CAPoeyAZRRHz8JFo176vA==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
